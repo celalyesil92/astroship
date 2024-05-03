@@ -1,0 +1,10 @@
+---
+const posts = await Astro.glob('https://villayapi.com/json');
+---
+<h1>Astro + WordPress 🚀</h1>
+{
+{posts.slice(0, 4).map((post) => (
+      <h2 set:html={post.name.rendered} />
+      <p set:html={post.slug.rendered} />
+  ))
+}

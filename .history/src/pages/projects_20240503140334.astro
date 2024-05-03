@@ -1,0 +1,7 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+let res = await fetch("https://villayapi.com/json");
+let posts = await res.json();
+console.log("im ok");
+---

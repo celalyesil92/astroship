@@ -1,0 +1,10 @@
+---
+import json from 'https://villayapi.com/json';
+---
+<h1>Astro + WordPress 🚀</h1>
+{
+  posts.map((post) => (
+      <h2 set:html={post.name.rendered} />
+      <p set:html={post.slug.rendered} />
+  ))
+}

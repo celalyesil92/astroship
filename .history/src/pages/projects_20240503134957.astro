@@ -1,0 +1,11 @@
+---
+const res = await fetch("https://villayapi.com/json");
+const posts = await res.json();
+---
+<h1>Astro + WordPress 🚀</h1>
+{
+  posts.map((post) => (
+      <h2 set:html={post.title.rendered} />
+      <p set:html={post.content.rendered} />
+  ))
+}

@@ -1,0 +1,12 @@
+---
+const posts = await Astro.glob('https://villayapi.com/json');
+---
+<div>
+    {posts.slice(0, 4).map((post) => (
+      <article>
+        <h2>{post.frontmatter.title}</h2>
+        <p>{post.frontmatter.description}</p>
+        <a href={post.url}>Read more</a>
+      </article>
+    ))}
+    </div>
